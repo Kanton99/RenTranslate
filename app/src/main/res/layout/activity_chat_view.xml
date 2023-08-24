@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chatViewVM" type="com.rentranslate.app.modules.chatview.data.viewmodel.ChatViewVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearChatview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAppheader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_58pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPlaces"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.78"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{chatViewVM.chatViewModel.txtPlaces}"
+                    style="@style/txtIntersemibold32" tools:text="@string/lbl_andrea_rossi"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnpuoivenireav"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_312pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_400cornerRadius">
+            <TextView android:id="@+id/txtPuoivenireav"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:text="@{chatViewVM.chatViewModel.txtPuoivenireav}"
+                style="@style/txtRobotobold20" tools:text="@string/msg_puoi_venire_a_v"/>
+            <View android:background="@color/black_900"
+                android:id="@+id/lineLineFour"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_2pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_5pxv" android:layout_width="@dimen/_338pxh"/>
+            <TextView android:id="@+id/txtYoucancometo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:text="@{chatViewVM.chatViewModel.txtYoucancometo}"
+                style="@style/txtRobotobold20" tools:text="@string/msg_you_can_come_to"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtFrameFour"
+            android:layout_gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_3pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:paddingStart="@dimen/_10pxh"
+            android:paddingTop="@dimen/_1pxv" android:singleLine="true"
+            android:text="@{chatViewVM.chatViewModel.txtFrameFour}"
+            style="@style/txtSolidRounded_2" tools:text="@string/msg_ok_i_ll_be_the"/>
+    </LinearLayout>
+</layout>

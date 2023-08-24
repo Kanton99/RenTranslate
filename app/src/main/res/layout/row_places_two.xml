@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="placesTwoRowModel" type="com.rentranslate.app.modules.placestwo.data.model.PlacesTwoRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRentedplace"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylegray_1">
+        <View
+            android:background="@drawable/rectangle_gradient_s_deep_purple_a700_e_red_a700"
+            android:id="@+id/viewImage"
+            android:layout_height="@dimen/_147pxh"
+            android:layout_marginBottom="@dimen/_6pxv"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_129pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnstreetcity"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_38pxv"
+            android:layout_marginEnd="@dimen/_81pxh"
+            android:layout_marginStart="@dimen/_11pxh"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_weight="0.44" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtStreetCity"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{placesTwoRowModel.txtStreetCity}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_street_city"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{placesTwoRowModel.txtPrice}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_price_10"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSpace50mTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{placesTwoRowModel.txtSpace50mTwo}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_space_50m_2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="renterAccountViewVM" type="com.rentranslate.app.modules.renteraccountview.data.viewmodel.RenterAccountViewVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnmenu"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_12pxh"
+        android:layout_marginStart="@dimen/_12pxh"
+        android:layout_marginTop="@dimen/_11pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_1pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearAppheader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_58pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPlaces"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_57pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_weight="0.64"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{renterAccountViewVM.renterAccountViewModel.txtPlaces}"
+                    style="@style/txtIntersemibold32" tools:text="@string/lbl_places"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_13pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearRenteraccount"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_128pxh"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_width="@dimen/_128pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_profilepicture}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+                <TextView android:gravity="start"
+                    android:id="@+id/txtNameAndreaRo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_width="match_parent"
+                    android:text="@{renterAccountViewVM.renterAccountViewModel.txtNameAndreaRo}"
+                    style="@style/txtRobotobold40" tools:text="@string/msg_name_andrea_ro"/>
+                <TextView android:gravity="start"
+                    android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_21pxh"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_width="match_parent"
+                    android:text="@{renterAccountViewVM.renterAccountViewModel.txtLanguage}"
+                    style="@style/txtInterbold40" tools:text="@string/msg_language_itali"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRentedplace"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_1">
+                    <View
+                        android:background="@drawable/rectangle_gradient_s_deep_purple_a700_e_red_a700"
+                        android:id="@+id/viewImageOne"
+                        android:layout_height="@dimen/_147pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginStart="@dimen/_17pxh"
+                        android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_129pxh"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnstreetcity"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_38pxv"
+                        android:layout_marginEnd="@dimen/_81pxh"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginTop="@dimen/_17pxv"
+                        android:layout_weight="0.44"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtStreetCity"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{renterAccountViewVM.renterAccountViewModel.txtStreetCity}"
+                            style="@style/txtRobotobold16" tools:text="@string/lbl_street_city"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginTop="@dimen/_21pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{renterAccountViewVM.renterAccountViewModel.txtPrice}"
+                            style="@style/txtRobotobold16" tools:text="@string/lbl_price_10"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSpace50mTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_25pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{renterAccountViewVM.renterAccountViewModel.txtSpace50mTwo}"
+                            style="@style/txtRobotobold16" tools:text="@string/lbl_space_50m_2"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <FrameLayout android:gravity="start"
+                    android:id="@+id/frameStackstreetcityOne"
+                    android:layout_height="@dimen/_335pxv"
+                    android:layout_marginTop="@dimen/_15pxv" android:layout_width="match_parent">
+                    <LinearLayout android:id="@+id/linearRentedplace1"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylegray_1">
+                        <View
+                            android:background="@drawable/rectangle_gradient_s_deep_purple_a700_e_red_a700"
+                            android:id="@+id/viewImageTwo"
+                            android:layout_height="@dimen/_147pxh"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginStart="@dimen/_17pxh"
+                            android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_129pxh"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnstreetcityOne"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_82pxv"
+                            android:layout_marginEnd="@dimen/_102pxh"
+                            android:layout_marginStart="@dimen/_7pxh"
+                            android:layout_marginTop="@dimen/_17pxv"
+                            android:layout_weight="0.39"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtStreetCityOne"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{renterAccountViewVM.renterAccountViewModel.txtStreetCityOne}"
+                                style="@style/txtRobotobold16" tools:text="@string/lbl_street_city"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPriceOne"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_6pxh"
+                                android:layout_marginTop="@dimen/_21pxv"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{renterAccountViewVM.renterAccountViewModel.txtPriceOne}"
+                                style="@style/txtRobotobold16" tools:text="@string/lbl_price_10"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearRentedplace2"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylegray_1">
+                        <View
+                            android:background="@drawable/rectangle_gradient_s_deep_purple_a700_e_red_a700"
+                            android:id="@+id/viewImageThree"
+                            android:layout_height="@dimen/_147pxh"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginStart="@dimen/_17pxh"
+                            android:layout_marginTop="@dimen/_6pxv" android:layout_width="@dimen/_129pxh"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearColumnstreetcityTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_16pxv"
+                            android:layout_marginEnd="@dimen/_17pxh"
+                            android:layout_marginStart="@dimen/_7pxh"
+                            android:layout_marginTop="@dimen/_16pxv"
+                            android:layout_weight="0.56"
+                            android:layout_width="0dp" android:orientation="vertical">
+                            <TextView android:id="@+id/txtStreetCityTwo"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:text="@{renterAccountViewVM.renterAccountViewModel.txtStreetCityTwo}"
+                                style="@style/txtRobotobold16" tools:text="@string/lbl_street_city"/>
+                            <TextView android:id="@+id/txtPriceTwo"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:text="@{renterAccountViewVM.renterAccountViewModel.txtPriceTwo}"
+                                style="@style/txtRobotobold16" tools:text="@string/lbl_price_10"/>
+                            <TextView
+                                android:id="@+id/txtSpace50mTwoOne"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1pxv"
+                                android:layout_width="match_parent"
+                                android:text="@{renterAccountViewVM.renterAccountViewModel.txtSpace50mTwoOne}"
+                                style="@style/txtRobotobold16" tools:text="@string/lbl_space_50m_2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageSettings"
+                        android:layout_gravity="top|start"
+                        android:layout_height="@dimen/_100pxh"
+                        android:layout_marginBottom="@dimen/_94pxv"
+                        android:layout_marginEnd="@dimen/_12pxh"
+                        android:layout_marginStart="@dimen/_12pxh"
+                        android:layout_marginTop="@dimen/_94pxv"
+                        android:layout_width="@dimen/_100pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_settings"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_settings"/>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
