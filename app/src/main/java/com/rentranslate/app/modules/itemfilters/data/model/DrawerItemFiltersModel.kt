@@ -13,17 +13,7 @@ data class DrawerItemFiltersModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtRome: String? = MyApp.getInstance().resources.getString(R.string.lbl_rome)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
   var txtMaxPrice: String? = MyApp.getInstance().resources.getString(R.string.lbl_max_price)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
-  var txtPrice: String? = MyApp.getInstance().resources.getString(R.string.lbl_150)
   ,
   /**
    * TODO Replace with dynamic value
@@ -33,26 +23,22 @@ data class DrawerItemFiltersModel(
   /**
    * TODO Replace with dynamic value
    */
-  var txtSpaceValue: String? = MyApp.getInstance().resources.getString(R.string.lbl_50m2)
-  ,
-  /**
-   * TODO Replace with dynamic value
-   */
   var txtMinbeds: String? = MyApp.getInstance().resources.getString(R.string.lbl_min_beds)
   ,
   /**
    * TODO Replace with dynamic value
    */
-  var txtOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_1)
-  ,
+  var etRomeValue: String? = null,
   /**
    * TODO Replace with dynamic value
    */
-  var txtButton: String? = MyApp.getInstance().resources.getString(R.string.lbl_set)
-  ,
+  var etPriceValue: String? = null,
   /**
    * TODO Replace with dynamic value
    */
-  var txtButtonOne: String? = MyApp.getInstance().resources.getString(R.string.lbl_remove)
-
+  var et50mTwoValue: String? = null,
+  /**
+   * TODO Replace with dynamic value
+   */
+  var etOneValue: String? = null
 )

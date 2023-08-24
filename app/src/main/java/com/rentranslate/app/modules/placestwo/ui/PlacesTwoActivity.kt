@@ -40,6 +40,9 @@ class PlacesTwoActivity : BaseActivity<ActivityPlacesTwoBinding>(R.layout.activi
     binding.imageFilter.setOnClickListener {
       toggleDrawer()
     }
+    binding.imageMenu.setOnClickListener {
+      toggleDrawer()
+    }
   }
 
   private fun toggleDrawer(): Unit {

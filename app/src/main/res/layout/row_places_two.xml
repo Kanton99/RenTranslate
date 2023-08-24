@@ -6,7 +6,7 @@
     <LinearLayout android:id="@+id/linearRentedplace"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="horizontal" style="@style/groupStylegray_1">
+        android:orientation="horizontal" style="@style/groupStylegray_400cornerRadius">
         <View
             android:background="@drawable/rectangle_gradient_s_deep_purple_a700_e_red_a700"
             android:id="@+id/viewImage"

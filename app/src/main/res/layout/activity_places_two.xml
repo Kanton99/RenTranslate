@@ -73,5 +73,14 @@
                 android:layout_width="match_parent"
                 drawerItemFiltersModel="@{placesTwoVM.includedModel}" layout="@layout/drawer_item_filters"/>
         </LinearLayout>
+        <LinearLayout android:id="@+id/leftDrawer1"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="@dimen/_360pxh" android:orientation="vertical">
+            <include android:id="@+id/included1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                drawerItemMenuModel="@{placesTwoVM.included1Model}" layout="@layout/drawer_item_menu"/>
+        </LinearLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

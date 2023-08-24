@@ -22,6 +22,8 @@ class PlaceActivity : BaseActivity<ActivityPlaceBinding>(R.layout.activity_place
   }
 
   override fun setUpClicks(): Unit {
+    binding.linearAppheader.setOnClickListener {
+    }
     binding.btnContact.setOnClickListener {
       val destIntent = ChatViewActivity.getIntent(this, null)
       startActivity(destIntent)

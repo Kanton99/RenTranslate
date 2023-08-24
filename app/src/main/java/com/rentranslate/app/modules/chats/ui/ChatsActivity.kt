@@ -18,6 +18,8 @@ class ChatsActivity : BaseActivity<ActivityChatsBinding>(R.layout.activity_chats
   }
 
   override fun setUpClicks(): Unit {
+    binding.linearAppheader.setOnClickListener {
+    }
     binding.linearChatlink.setOnClickListener {
       val destIntent = ChatViewActivity.getIntent(this, null)
       startActivity(destIntent)

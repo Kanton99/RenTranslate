@@ -19,6 +19,8 @@ class RenterAccountViewActivity :
   }
 
   override fun setUpClicks(): Unit {
+    binding.linearAppheader.setOnClickListener {
+    }
     binding.linearRentedplace.setOnClickListener {
       val destIntent = PlaceActivity.getIntent(this, null)
       startActivity(destIntent)

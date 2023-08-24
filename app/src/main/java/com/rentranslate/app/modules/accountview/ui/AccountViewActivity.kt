@@ -19,18 +19,18 @@ class AccountViewActivity : BaseActivity<ActivityAccountViewBinding>(R.layout.ac
   }
 
   override fun setUpClicks(): Unit {
-
-
     binding.imageProfilePicture.setOnClickListener {
       ImagePickerFragmentDialog().show(supportFragmentManager)
       { path ->//TODO HANDLE DATA
       }
 
+          }
+      binding.linearAppheader.setOnClickListener {
+      }
+    }
+
+    companion object {
+      const val TAG: String = "ACCOUNT_VIEW_ACTIVITY"
+
     }
   }
-
-  companion object {
-    const val TAG: String = "ACCOUNT_VIEW_ACTIVITY"
-
-  }
-}

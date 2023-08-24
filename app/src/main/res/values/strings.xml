@@ -8,8 +8,8 @@
     <string name="lbl_min_beds">Min beds</string>
     <string name="lbl_max_price">Max Price:</string>
     <string name="lbl_remove">Remove</string>
-    <string name="lbl_search">Search...</string>
     <string name="lbl_price_10">Price: 10\u20ac</string>
+    <string name="lbl_search">Search...</string>
     <string name="lbl_1">1</string>
     <string name="lbl_rt">RT</string>
     <string name="msg_owner_andrea_r">Owner: Andrea Rossi</string>
@@ -27,14 +27,13 @@ thursday at 17:00</string>
     <string name="lbl_new_place">New Place</string>
     <string name="lbl_change_password">change Password</string>
     <string name="lbl_chats">Chats</string>
-    <string name="lbl_rome">Rome</string>
     <string name="lbl_set">Set</string>
     <string name="msg_name_anton_vol">Name: Anton Volkov</string>
     <string name="lbl_edit">Edit</string>
     <string name="lbl_space">Space:</string>
-    <string name="lbl_50m2">50m2</string>
     <string name="lbl_contact">Contact</string>
     <string name="lbl_change_email">Change email</string>
+    <string name="lbl_city2">City</string>
     <string name="msg_account_setting">Account settings</string>
     <string name="lbl_places">Places</string>
     <string name="msg_lorem_ipsum_dol">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam ante velit, a condimentum ligula feugiat vel. Suspendisse id accumsan enim. Mauris interdum efficitur massa, sed dignissim nibh.</string>
@@ -45,8 +44,10 @@ thursday at 17:00</string>
     <string name="msg_address_edit">Address: edit...</string>
     <string name="msg_language_itali">Language: Italian</string>
     <string name="lbl_address">Address: </string>
-    <string name="lbl_150">\u20ac150</string>
+    <string name="lbl_150">150</string>
     <string name="lbl_account">Account</string>
+    <string name="msg_please_enter_valid_nu">Please enter valid number</string>
+    <string name="msg_please_enter_valid_text">Please enter valid text</string>
     <string name="msg_this_contact_has_no_phone_nu">This contact has no phone number</string>
     <string name="msg_camera_storage_permission">This Application need permission\n1.Camera permission to capture the image.\n2.Storage Access permission to save the captured image.</string>
     <string name="lbl_camera">Camera</string>

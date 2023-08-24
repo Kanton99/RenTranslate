@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_312pxv"
             android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylegray_400cornerRadius">
+            android:orientation="vertical" style="@style/groupStylegray_1">
             <TextView android:id="@+id/txtPuoivenireav"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_11pxh"
@@ -79,6 +79,6 @@
             android:paddingStart="@dimen/_10pxh"
             android:paddingTop="@dimen/_1pxv" android:singleLine="true"
             android:text="@{chatViewVM.chatViewModel.txtFrameFour}"
-            style="@style/txtSolidRounded_2" tools:text="@string/msg_ok_i_ll_be_the"/>
+            style="@style/txtSolidRounded" tools:text="@string/msg_ok_i_ll_be_the"/>
     </LinearLayout>
 </layout>

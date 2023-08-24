@@ -20,6 +20,8 @@ class ChatViewActivity : BaseActivity<ActivityChatViewBinding>(R.layout.activity
   }
 
   override fun setUpClicks(): Unit {
+    binding.linearAppheader.setOnClickListener {
+    }
   }
 
   companion object {

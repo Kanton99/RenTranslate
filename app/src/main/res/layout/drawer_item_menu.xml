@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemMenuModel" type="com.rentranslate.app.modules.itemmenu.data.model.DrawerItemMenuModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearMenu"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearMenu1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_608pxv"
+            android:layout_marginEnd="@dimen/_124pxh"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPlaces"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_32pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <View
+                    android:background="@drawable/rectangle_bg_bluegray_100_radius_10"
+                    android:id="@+id/viewIcon"
+                    android:layout_height="@dimen/_32pxh" android:layout_width="@dimen/_32pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPlaces"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8pxv"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{drawerItemMenuModel.txtPlaces}"
+                    style="@style/txtRobotobold16" tools:text="@string/lbl_places"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAccount"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <View
+                    android:background="@drawable/rectangle_bg_bluegray_100_radius_10"
+                    android:id="@+id/viewIconOne"
+                    android:layout_height="@dimen/_32pxh" android:layout_width="@dimen/_32pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAccount"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8pxv"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.65"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{drawerItemMenuModel.txtAccount}"
+                    style="@style/txtRobotobold16" tools:text="@string/lbl_account"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearChats"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_28pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <View
+                    android:background="@drawable/rectangle_bg_bluegray_100_radius_10"
+                    android:id="@+id/viewIconTwo"
+                    android:layout_height="@dimen/_32pxh" android:layout_width="@dimen/_32pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChats"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8pxv"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_weight="0.57"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{drawerItemMenuModel.txtChats}"
+                    style="@style/txtRobotobold16" tools:text="@string/lbl_chats"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
