@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="newPlaceVM" type="com.rentranslate.app.modules.newplace.data.viewmodel.NewPlaceVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNewplace"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAppheader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_58pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewPlace"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_29pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_weight="0.74"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{newPlaceVM.newPlaceModel.txtNewPlace}"
+                    style="@style/txtIntersemibold32" tools:text="@string/lbl_new_place"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearCentre"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <LinearLayout android:id="@+id/linearPhotos"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imagePLus"
+                    android:layout_height="@dimen/_120pxh"
+                    android:layout_marginBottom="@dimen/_49pxv"
+                    android:layout_marginTop="@dimen/_49pxv"
+                    android:layout_width="@dimen/_120pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_plus"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+                <ImageView android:id="@+id/imageImgOne"
+                    android:layout_height="@dimen/_218pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_width="@dimen/_218pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_profilepicture}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{newPlaceVM.newPlaceModel.txtDescription}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_description"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEdit"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{newPlaceVM.newPlaceModel.txtEdit}"
+                style="@style/txtRobotobold16_1" tools:text="@string/lbl_edit2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddressedit"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_27pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{newPlaceVM.newPlaceModel.txtAddressedit}"
+                style="@style/txtRobotobold16" tools:text="@string/msg_address_edit"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOwnerAndreaR"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{newPlaceVM.newPlaceModel.txtOwnerAndreaR}"
+                style="@style/txtRobotobold16" tools:text="@string/msg_owner_andrea_r"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{newPlaceVM.newPlaceModel.txtPrice}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_price2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

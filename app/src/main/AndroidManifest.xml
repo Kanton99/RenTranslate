@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.rentranslate.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.rentranslate.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.rentranslate.app.modules.chats.ui.ChatsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.renteraccountview.ui.RenterAccountViewActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.rentersplace.ui.RenterSPlaceActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.accountview.ui.AccountViewActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.place.ui.PlaceActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.chatview.ui.ChatViewActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.newplace.ui.NewPlaceActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.placestwo.ui.PlacesTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.rentranslate.app.modules.imageview.ui.ImageViewActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.rentranslate.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rentranslate.app.modules.accountsettings.ui.AccountSettingsActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

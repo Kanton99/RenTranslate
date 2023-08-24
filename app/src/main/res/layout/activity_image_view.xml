@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageViewVM" type="com.rentranslate.app.modules.imageview.data.viewmodel.ImageViewVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearImageview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_55pxh"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="@dimen/_38pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_329pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_175pxv"
+            android:layout_width="@dimen/_300pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_profilepicture}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chatsVM" type="com.rentranslate.app.modules.chats.data.viewmodel.ChatsVM"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearChats"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_5pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearAppheader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_58pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPlaces"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_69pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_weight="0.61"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{chatsVM.chatsModel.txtPlaces}"
+                    style="@style/txtIntersemibold32" tools:text="@string/lbl_chats"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSearchbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_5pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageSearch"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_search"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSearchOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5pxv"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_weight="0.71" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{chatsVM.chatsModel.txtSearchOne}"
+                style="@style/txtRobotobold24_2" tools:text="@string/lbl_search"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearChatlink"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_572pxv"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageIcon"
+                android:layout_height="@dimen/_93pxh"
+                android:layout_width="@dimen/_93pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_profilepicture}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnandrearossi"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8pxv"
+                android:layout_marginEnd="@dimen/_107pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_weight="0.61" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAndreaRossi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{chatsVM.chatsModel.txtAndreaRossi}"
+                    style="@style/txtRobotobold24" tools:text="@string/lbl_andrea_rossi"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOkIllbethe"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_22pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{chatsVM.chatsModel.txtOkIllbethe}"
+                    style="@style/txtRobotobold20_1" tools:text="@string/msg_ok_i_ll_be_the2"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
