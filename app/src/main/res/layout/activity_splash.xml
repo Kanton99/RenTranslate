@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVM" type="com.rentranslate.app.modules.splash.data.viewmodel.SplashVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSplash"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal" android:id="@+id/txtRT"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_101pxh"
+            android:layout_marginStart="@dimen/_101pxh"
+            android:layout_marginTop="@dimen/_323pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{splashVM.splashModel.txtRT}"
+            style="@style/txtRobotobold128" tools:text="@string/lbl_rt"/>
+    </LinearLayout>
+</layout>

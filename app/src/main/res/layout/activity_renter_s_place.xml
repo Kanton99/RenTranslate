@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="renterSPlaceVM" type="com.rentranslate.app.modules.rentersplace.data.viewmodel.RenterSPlaceVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRentersplace"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearAppheader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_49pxh"
+                    android:layout_width="@dimen/_58pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPlace"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5pxv"
+                    android:layout_marginStart="@dimen/_68pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_weight="0.59"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{renterSPlaceVM.renterSPlaceModel.txtPlace}"
+                    style="@style/txtIntersemibold32" tools:text="@string/lbl_place"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearCentre"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <LinearLayout android:id="@+id/linearPhotos"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageImgOne"
+                    android:layout_height="@dimen/_218pxh"
+                    android:layout_width="@dimen/_218pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_profilepicture}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+                <ImageView android:id="@+id/imageImgOneOne"
+                    android:layout_height="@dimen/_218pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_width="@dimen/_122pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_img1_218x122}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_img1_218x122"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{renterSPlaceVM.renterSPlaceModel.txtDescription}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_description"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescriptionOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="match_parent"
+                android:text="@{renterSPlaceVM.renterSPlaceModel.txtDescriptionOne}"
+                style="@style/txtRobotobold16" tools:text="@string/msg_lorem_ipsum_dol"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddressStreet"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{renterSPlaceVM.renterSPlaceModel.txtAddressStreet}"
+                style="@style/txtRobotobold16" tools:text="@string/msg_address_street"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOwnerAndreaR"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{renterSPlaceVM.renterSPlaceModel.txtOwnerAndreaR}"
+                style="@style/txtRobotobold16" tools:text="@string/msg_owner_andrea_r"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{renterSPlaceVM.renterSPlaceModel.txtPrice}"
+                style="@style/txtRobotobold16" tools:text="@string/lbl_price"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnEdit"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_edit"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_edit"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

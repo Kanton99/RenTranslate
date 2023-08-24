@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemFiltersModel" type="com.rentranslate.app.modules.itemfilters.data.model.DrawerItemFiltersModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearFilters"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFilters1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_559pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearCity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCity"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.44"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{drawerItemFiltersModel.txtCity}"
+                        style="@style/txtRobotobold24" tools:text="@string/lbl_city"/>
+                    <EditText
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_city2"
+                        android:id="@+id/etRome"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6pxh"
+                        android:layout_weight="0.56"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@={drawerItemFiltersModel.etRomeValue}"
+                        android:textColorHint="@color/bluegray_400"
+                        style="@style/etRobotobold24" tools:ignore="Autofill"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMaxPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.67"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{drawerItemFiltersModel.txtMaxPrice}"
+                    style="@style/txtRobotobold24" tools:text="@string/lbl_max_price"/>
+                <EditText
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_150"
+                    android:id="@+id/etPrice" android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_weight="0.33"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@={drawerItemFiltersModel.etPriceValue}"
+                    android:textColorHint="@color/bluegray_400"
+                    style="@style/etRobotobold24" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSpace"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSpace"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.54"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{drawerItemFiltersModel.txtSpace}"
+                    style="@style/txtRobotobold24" tools:text="@string/lbl_space"/>
+                <EditText
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_150"
+                    android:id="@+id/et50mTwo" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_weight="0.46"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@={drawerItemFiltersModel.et50mTwoValue}"
+                    android:textColorHint="@color/bluegray_400"
+                    style="@style/etRobotobold24" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearBeds"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMinbeds"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.9"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{drawerItemFiltersModel.txtMinbeds}"
+                    style="@style/txtRobotobold24" tools:text="@string/lbl_min_beds"/>
+                <EditText
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end" android:hint="@string/lbl_1"
+                    android:id="@+id/etOne" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@={drawerItemFiltersModel.etOneValue}"
+                    android:textColorHint="@color/bluegray_400"
+                    style="@style/etRobotobold24" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearButtons"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnButton"
+                    android:layout_height="@dimen/_49pxv"
+                    android:layout_width="@dimen/_62pxh"
+                    android:paddingBottom="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_5pxh"
+                    android:paddingStart="@dimen/_5pxh"
+                    android:paddingTop="@dimen/_4pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_set"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded" tools:text="@string/lbl_set"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnButtonOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_124pxh"
+                    android:layout_weight="0.68"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_4pxv"
+                    android:paddingEnd="@dimen/_5pxh"
+                    android:paddingStart="@dimen/_5pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_remove"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_remove"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
